@@ -1,0 +1,111 @@
+﻿<p class="welcomeText center">
+    Thanks for shopping at the CodeClan Shop.<br />
+    This is your shopping basket. Here you can edit the items, 
+    go back to the shop or clear the basket.
+</p>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8">
+
+            <!-- items -->
+            <table class="table table-bordered">
+
+                <!-- header -->
+                <tr class="well header">
+                    <td class="tdCenter"><b>Item</b></td>
+                    <td class="tdCenter"><b>Quantity</b></td>
+                    <td class="tdCenter"><b>Price</b></td>
+                    <td />
+                </tr>
+
+                <!-- empty basket message -->
+                <tr ng-hide="basket.getTotalCount() > 0" >
+                    <td class="tdCenter" colspan="4">
+                        Your basket is empty.
+                    </td>
+                </tr>
+
+                <!-- basket items -->
+                <tr ng-repeat="item in basket.items | orderBy:'name'">
+                    <td class="tdCenter">{{item.name}}</td>
+                    <td class="tdCenter">
+                      <div class="input-append">
+                        
+                        <input
+                            class="span3 text-center" type="tel" 
+                            ng-model="item.quantity" 
+                            ng-change="basket.saveItems()" />
+                        <button 
+                            class="btn btn-success" type="button" 
+                            ng-disabled="item.quantity >= 1000"
+                            ng-click="basket.addItem(item.code, item.name, item.price, +1)">+</button>
+                        <button 
+                            class="btn btn-inverse" type="button" 
+                            ng-disabled="item.quantity <= 1"
+                            ng-click="basket.addItem(item.code, item.name, item.price, -1)">-</button>
+                      </div>
+                    </td>
+                    <td class="tdRight">{{item.price * item.quantity | currency: "£"}}</td>
+                    <td class="tdCenter" title="remove from basket">
+                        <a href="" ng-click="basket.addItem(item.code, item.name, item.price, -10000000)" >
+                            <i class="icon-remove" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                   
+                    <td class="tdCenter">Buy one get one free</td>
+                    <td></td>
+                    <td class="tdRight">- {{basket.getBogofValue() | currency: "£"}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+
+                    <td class="tdCenter">Sub Total</td>
+                    <td></td>
+                    <td class="tdRight">{{basket.getTotalPrice() - basket.getBogofValue() | currency: "£"}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+
+                    <td class="tdCenter">10% Discount</td>
+                    <td></td>
+                    <td class="tdRight">- {{basket.getTenPercentValue() | currency: "£"}}</td>
+                    <td></td>
+                </tr>
+
+                <!-- footer -->
+                <tr class="well header">
+                    <td class="tdCenter"><b>Total after discounts</b></td>
+                    <td class="tdCenter"><b>{{basket.getTotalCount()}}</b></td>
+                    <td class="tdRight"><b>{{basket.getDiscountedPrice() | currency: "£"}}</b></td>
+                    <td />
+                </tr>
+            </table>
+        </div>
+
+        <!-- buttons -->
+        <div class="span3">
+            <p class="text-info">
+
+                <button 
+                    class="btn btn-block" 
+                    onclick="window.location.href='default.htm'">
+                    <i class="icon-chevron-left" /> back to shop
+                </button>
+                <button 
+                    class="btn btn-block btn-danger" 
+                    ng-click="basket.clearItems()" 
+                    ng-disabled="basket.getTotalCount() < 1" >
+                    <i class="icon-trash icon-white" /> clear basket
+                </button>
+               
+            </p>
+
+            <br /><br />
+
+           
+        </div>
+    </div>
+</div>

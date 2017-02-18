@@ -1,0 +1,6 @@
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\bin\ShoppingCart.dll.config
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\bin\ShoppingCart.dll
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\bin\ShoppingCart.pdb
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.csprojResolveAssemblyReference.cache
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.dll
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.pdb

@@ -1,0 +1,12 @@
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\bin\ShoppingCart.dll.config
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\bin\ShoppingCart.dll
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\bin\ShoppingCart.pdb
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.dll
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.pdb
+C:\Users\alast\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingBasket.csprojResolveAssemblyReference.cache
+C:\Users\alast\Desktop\CodeClan Coding Test\ShoppingBasket\bin\ShoppingBasket.dll.config
+C:\Users\alast\Desktop\CodeClan Coding Test\ShoppingBasket\bin\ShoppingBasket.dll
+C:\Users\alast\Desktop\CodeClan Coding Test\ShoppingBasket\bin\ShoppingBasket.pdb
+C:\Users\alast\Desktop\CodeClan Coding Test\ShoppingBasket\obj\Debug\ShoppingBasket.dll
+C:\Users\alast\Desktop\CodeClan Coding Test\ShoppingBasket\obj\Debug\ShoppingBasket.pdb
+C:\Users\alast\Desktop\CodeClan Coding Test\ShoppingBasket\obj\Debug\ShoppingBasket.csprojResolveAssemblyReference.cache

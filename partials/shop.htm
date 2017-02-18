@@ -1,0 +1,42 @@
+﻿<p class="welcomeText center">
+    Welcome to the CodeClan Shop.<br />
+    Please select the products you want and add them to your shopping basket.<br />
+    When you are done, click the shopping basket icon to review your order. <br/>
+    All items BOGOF plus 10% off when you spend over £20 after BOGOF! (Discounts will be applyed once you go to checkout.)
+</p>
+
+<table class="table table-bordered">
+    <tr class="well header">
+        <td class="tdRight" colspan="16" >
+            <a class="basketLink" href="default.htm#/basket" title="go to shopping basket" ng-disabled="basket.getTotalCount() < 1">
+                <i class="icon-shopping-cart" />
+                <b>{{basket.getTotalCount()}}</b> items, <b>{{basket.getTotalPrice() | currency: "£"}}</b>
+            </a>
+        </td>
+    </tr>
+    <tr ng-repeat="product in shop.products | orderBy:'name'" >
+        <td class="tdCenter" colspan="6"><img ng-src="img/products/{{product.code}}.png" alt="{{product.name}}" /></td>
+        <td class="tdCenter padded">
+            <p>
+           <span class="itemName"><b>{{product.name}}</b></span><br />
+            {{product.description}}
+                </p>
+        </td>
+        <td class="tdCenter" colspan="8">
+            {{product.price | currency: "£"}}
+        </td>
+        <td class="tdCenter link" colspan="4">
+            <a class="addBasket" href="" ng-click="basket.addItem(product.code, product.name, product.price, 1)">
+                Add to basket
+            </a>
+        </td>
+    </tr>
+    <tr class="well">
+        <td class="tdRight" colspan="16">
+            <a href="default.htm#/basket" title="go to shopping basket" ng-disabled="basket.getTotalCount() < 1">
+                <i class="icon-shopping-cart" />
+                <b>{{basket.getTotalCount()}}</b> items, <b>{{basket.getTotalPrice() | currency: "£"}}</b>
+            </a>
+        </td>
+    </tr>
+</table>

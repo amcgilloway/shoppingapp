@@ -1,0 +1,47 @@
+﻿
+.header {
+    background-color:lightsteelblue;
+    text-align:center;
+}
+.center{
+    text-align:center;
+}
+.table td.tdRight {
+  text-align: right;
+}
+.table td.tdCenter {
+  text-align: center;
+  vertical-align:middle;
+}
+
+.padded{
+    width:500px !important;
+        word-wrap:break-word;
+}
+.table-nonfluid {
+   width: auto;
+}
+
+.welcomeText {
+    font-size:20px;
+    font-family:Arial;
+    color:navy;
+    line-height:1.5;
+}
+
+.itemName {
+    font-family:arial;
+    color:deepskyblue;
+    font-weight:bold;
+}
+
+.addBasket {
+    color:navy;
+    font-family:Arial;
+    font-size:16px;
+}
+
+.basketLink {
+    color:black;
+}
+
